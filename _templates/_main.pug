@@ -10,7 +10,9 @@ html(lang="ru")
         link(rel="stylesheet", href="css/normalize.css")
         link(rel="stylesheet", href="css/index.css")
     body
-        block content
-        
+        .wrapper
+            block content
+        include ../_blocks/_footer/_footer
         block js
-            script(src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous")
+            script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
+            script(src="js/main.js")

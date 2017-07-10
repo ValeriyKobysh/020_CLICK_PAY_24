@@ -1,0 +1,26 @@
+mixin footerPartnersItem(src)
+    li.footer__partners-item
+        img(src=src, alt="Alternative Text")
+
+mixin footerNavItem(link, title)
+    li.footer__nav-item
+        a.footer__nav-link.link(href=link) #{title}
+
+footer.footer
+    .footer__container.container.flex-container
+        .footer__logo.column-6.flex-container.flex-col.jc-between
+            a.footer__logo-wrap(href="/")
+                img(src="img/logo.png", alt="")
+            .footer__copyright © 2015–2017 ClickPay24.tv. <br /> Сервис моментального приема платежей и каталог партнерских программ.
+        .footer__nav.column-2
+            h3.footer__nav-heading Навигация
+            nav.footer__nav-block
+                ul.footer__nav-list.list
+                    +footerNavItem("support.html", "Служба поддержки")
+                    +footerNavItem("conditions.html", "Условия сервиса")
+                    +footerNavItem("blog.html", "Наш блог")
+        .footer__partners.column-4.flex-container.jc-end.ai-end
+            ul.footer__partners-list.list.flex-container
+                +footerPartnersItem("img/footer-partners/1.png")
+                +footerPartnersItem("img/footer-partners/2.png")
+                +footerPartnersItem("img/footer-partners/3.png")
