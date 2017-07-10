@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "module": "system",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "target": "ES5",
+        "outDir": "js",
+        "sourceMap": true
+    },
+        "files": [
+            "ts/*"
+        ],
+    "include": [
+        "ts/",
+        "typings/"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+}

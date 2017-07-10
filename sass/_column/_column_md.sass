@@ -1,0 +1,6 @@
+.column_md
+    box-sizing: border-box
+    padding: 0 15px
+@for $i from 1 through $countColumns
+    .column-#{$i}_md
+        width: calc-width($i)
