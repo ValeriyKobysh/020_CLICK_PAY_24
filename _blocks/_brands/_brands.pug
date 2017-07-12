@@ -1,0 +1,10 @@
+mixin brandsItem(src)
+    li.brands__item
+        img.brands__img(src=src, alt="Alternative text")
+
+section.brands
+    .brands__container.flex-container.ai-center
+        ul.brands__list.list.flex-container.ai-center.jc-around
+            - for (var i = 1; i <= 10; i++)
+                +brandsItem("img/brands/" + i + ".png")
+

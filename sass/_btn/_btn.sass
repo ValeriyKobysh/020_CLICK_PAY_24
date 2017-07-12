@@ -1,0 +1,35 @@
+.btn
+    text-transform: uppercase
+    font-family: $baseff
+    font-weight: 500
+    color: $white-color
+    font-size: rem(15px)
+    line-height: rem(24px)
+    border-radius: 23px
+    border-width: 2px
+    border-style: solid
+    border-color: transparent
+    cursor: pointer
+    outline: none
+    display: block
+    +transition()
+
+    &_large
+        +size(260px, 47px)
+
+    &_small
+        +size(165px, 36px)
+
+    &_color
+        background-color: $green-color
+        box-shadow: 0px 0px 10.12px 0.88px rgba($green-color, 0.4)
+
+        &:hover, &:active
+            background-color: lighten($green-color, 10%)
+
+    &_trans
+        transparent
+        border-color: $white-color
+
+        &:hover, &:active
+            background-color: rgba($white-color, .1)

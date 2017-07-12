@@ -42,3 +42,7 @@
             return this.each(make);
         }
     })(jQuery)
+
+$(document).click(function(e){
+    console.log(e.target);
+});

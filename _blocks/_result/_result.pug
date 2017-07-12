@@ -1,0 +1,26 @@
+mixin resultItem(title)
+    li.result__item.flex-container
+        span.result__icon
+        span.result__title #{title}
+
+section.result
+    .result__container.container
+        .result__header
+            h2.result__heading Clickpay24 отличные результаты в короткие сроки
+            span.result__desc Пакет наших решений – настоящий «фулл-хаус» для инфо-предпринимателей
+        .result__content.flex-container
+            .result__left.column-7
+                p.result__text Вы создаете удивительные веб-сайты, но не знаете, как привлечь к нему больше внимания? Начните свою первую кампанию в 
+                    span.result__text_mark Clickpay24
+                    | ! Даже если вы новичок в инфобизнесе, теперь у вас есть все необходимое для продвижения своего продукта в Интернете. 
+                p.result__text Вы можете использовать набор наших инструментов  для своих проектов, или вы можете стать партнером, предоставляя услуги сайтов за достойное вознаграждение. Пусть 
+                    span.result__text_mark Clickpay24 
+                    |работает для вас! Бесплатный доступ, быстрые результаты, 100% эффективность.
+            .result__right.column-5
+                ul.result__list.list
+                    +resultItem("Повышение узнаваемости продукта в глазах целевой аудитории")
+                    +resultItem("Отчеты по аналитике кампаний")
+                    +resultItem("Подключение 50+ способов оплаты")
+                    +resultItem("Широкие возможности партнерской программы")
+        .result__footer
+            img(src="img/result__img.svg", alt="")

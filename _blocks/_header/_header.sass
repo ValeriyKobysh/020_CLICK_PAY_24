@@ -1,0 +1,156 @@
+.header
+    background-image: radial-gradient( 50% 50%, circle closest-side, $blue-light-color 0%, $blue-color 100%)
+    position: relative
+    overflow: hidden
+
+    &:before
+        content: ""
+        position: absolute
+        right: -5%
+        top: 5%
+        z-index: 0
+        display: block
+        +size(1300px)
+        background-color: rgba($white-color, .1)
+        border-radius: 50%
+
+    &__container
+        height: 100%
+    
+    &__top, &__content
+        z-index: 1
+
+    &__top
+        height: 100px
+        box-sizing: border-box
+        padding: 20px 0
+        flex-shrink: 0
+        position: relative
+
+    &__content
+        flex-grow: 1
+        height: 700px
+
+    &__logo
+        padding-left: 6px
+
+        & > img
+            max-width: 100%
+
+    &__nav
+
+        &-item
+            margin-left: 50px
+
+            &:first-child
+                margin-left: 0
+
+        &-link
+            color: $text-light-color
+            font-size: rem(15px)
+            line-height: rem(24px)
+            +transition(color)
+
+            &:hover, &:active
+                color: $text-medium-color
+
+    &__btn
+        margin-left: 38px
+
+    &__video-block
+        background-color: $white-color
+        +size(460px, 375px)
+        border-radius: 20px
+        overflow: hidden
+
+    &__video
+        +size(100%)
+
+    &__left
+        color: $text-light-color
+        padding-left: 10px
+        height: 400px
+
+    &__heading
+        font-weight: 700
+        font-size: rem(30px)
+        line-height: rem(40px)
+        text-transform: uppercase
+        margin-bottom: 13px
+    
+    &__slogan, &__desc
+        display: block
+        line-height: rem(24px)
+
+    &__slogan
+        font-size: rem(18px)
+        font-weight: 300
+        margin-bottom: 9px
+
+    &__desc
+        font-style: italic
+        font-size: rem(15px)
+        margin-bottom: 50px
+
+    &__images
+        position: absolute
+        z-index: 1
+        animation-iteration-count: infinite
+        animation-duration: 5s
+        animation-fill-mode: forwards
+
+        &_1
+            top: 150px
+            left: 190px
+
+            &:hover
+                animation-name: images-1
+
+        &_2
+            bottom: 35px
+            left: 350px
+
+            &:hover
+                animation-name: images-2
+
+        &_3
+            top: 120px
+            left: 610px
+
+        &_4
+            bottom: 85px
+            left: 835px
+
+        &_5
+            top: 110px
+            right: 585px
+
+        &_6
+            bottom: -50px
+            right: 390px
+
+
+// @keyframes images-1
+//     0%
+//         top: 150px
+//         left: 190px
+//     25%
+//         top: 225px
+//         left: 95px
+//     50%
+//         top: 300px
+//         left: 190px
+//     75%
+//         top: 225px
+//         left: 285px
+//     100%
+//         top: 150px
+//         left: 190px
+
+// @keyframes images-2
+//     0%
+//         left: 350px
+//     50%
+//         left: 340px
+//     100%
+//         left: 350px

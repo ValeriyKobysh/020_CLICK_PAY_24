@@ -1,0 +1,39 @@
+mixin headerNavItem(link, title)
+    li.header__nav-item
+        a.header__nav-link.link(href=link) #{title}
+
+header.header.flex-container.flex-col
+    .header__top
+        .header__container.container
+            .flex-container.ai-center.jc-between
+                a.header__logo(href="/")
+                    img.header__img(src="img/logo.png", alt="Alternative text")
+                .header__top-left.flex-container.ai-center
+                    nav.header__nav
+                        ul.header__nav-list.list.flex-container
+                            +headerNavItem("blog.html", "Наш блог")
+                            +headerNavItem("blog.html", "Поиск платежей")
+                            +headerNavItem("blog.html", "Разработка сайтов")
+                    button.header__btn.btn.btn_small.btn_color Войти
+    .header__content
+        .header__container.container.flex-container.ai-center
+            .header__left.column-6
+                h1.header__heading ClickPay24 – комплекс решений для эффективной продажи ИНФОПРОДУКТОВ
+                span.header__slogan Откройте для себя потенциал своего сайта.
+                span.header__desc Анализ. Решение. Результаты.
+                a.btn.btn_large.btn_trans.flex-container.ai-center.jc-center.link(href="javascript:;") Подключить платежи
+            .header__right.flex-container.jc-center.column-6
+                .header__video-block
+                    iframe.header__video(src="https://www.youtube.com/embed/5bRPTb3z2rU" frameborder="0" allowfullscreen)
+    span.header__images.header__images_1
+        img(src="img/header-images/1.png", alt="")
+    span.header__images.header__images_2
+        img(src="img/header-images/2.png", alt="")
+    span.header__images.header__images_3
+        img(src="img/header-images/3.png", alt="")
+    span.header__images.header__images_4
+        img(src="img/header-images/4.png", alt="")
+    span.header__images.header__images_5
+        img(src="img/header-images/5.png", alt="")
+    span.header__images.header__images_6
+        img(src="img/header-images/6.png", alt="")
