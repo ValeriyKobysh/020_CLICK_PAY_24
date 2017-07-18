@@ -56,63 +56,78 @@
     var colorLine = (function(){
         let prevScrollPosition: number = null;
 
+        let Up = function(object: any, linePosition:number, speed: number){
+            let maxValue: number = parseInt(object.css("stroke-dasharray")),
+                value: number = maxValue - linePosition;
+
+            if(speed > value) speed = value;
+
+            (linePosition >= 0 && linePosition <= maxValue) ? object.css("stroke-dashoffset", maxValue - speed) : object.css("stroke-dashoffset", maxValue);
+
+            };
+
+        let Down =  function(object: any, linePosition:number, speed: number){
+            let maxValue: number = parseInt(object.css("stroke-dasharray"));
+
+            console.log("Line Position " + linePosition);
+            console.log("Speed " + speed);
+            // if(speed > linePosition) speed = linePosition;
+
+                (linePosition >= 0) ? object.css("stroke-dashoffset", maxValue - speed) : object.css("stroke-dashoffset", 0);
+
+            };
+
         return {
 
             InBlock: function(windowTopLine: number, blockPosition: number){
                 return (windowTopLine >= blockPosition);
             },
-            
-            whereScroll: function (windowPosition: number) {
 
-                let scroll: number = null,
-                    howToScroll: number = null;
+            Scroll: function (obj: any, linePosition: number, windowPosition: number, speed: number) {
 
+                let scroll: number = null;
+
+                // Проверка вверх или низ был скролл. 1 = вниз, -1 = вверх
                 (prevScrollPosition > windowPosition) ? scroll = 1 : scroll = -1;
-                howToScroll = (prevScrollPosition - windowPosition) * scroll; 
+
+                // Если скролл был вниз
+                if(scroll == 1) {
+                    Up(obj, linePosition, speed);
+                }
+                else if(scroll == -1){
+                    Down(obj, linePosition, speed);
+                }
 
                 prevScrollPosition = windowPosition;
 
-                return {
-                    scroll: scroll,
-                    howToScroll: howToScroll
-                };
-            },
-
-            Up: function(object: any, linePosition:number){
-                if(linePosition <= 0){
-                    object.css("stroke-dashoffset", linePosition + linePosition*0.20);
-                    console.log(linePosition);
-                };
-            },
-
-            Down: function(object: any, linePosition:number, ){
-                if(linePosition >= 0){
-                    object.css("stroke-dashoffset", linePosition - linePosition*0.20);
-                };
             }
-
         };
     })();
 
 
     $(document).scroll(function(){
         let _window = $(window),
-            block = $(".steps__line"),
+            block = $(".steps"),
             line = $(".steps__line_1"),
+            line2 = $(".steps__line_3"),
+            lineMax: number = parseInt(line.css("stroke-dasharray")),
+            lineMax2: number = parseInt(line2.css("stroke-dasharray")),
             linePosition: number = parseInt(line.css("stroke-dashoffset")),
-            blockPadding: number = 125,
+            linePosition2: number = parseInt(line2.css("stroke-dashoffset")),
+            blockHeight: number = block.innerHeight(),
             blockPosition: number = block.offset().top,
             windowPosition: number = _window.scrollTop(),
             windowHeight: number = _window.outerHeight(),
-            windowTopLine: number = windowPosition + windowHeight;
+            windowTopLine: number = windowPosition + windowHeight - 125,
+            persent: number = (windowTopLine - blockPosition) / blockHeight,
+            speed1: number =  lineMax * persent,
+            speed2: number =  lineMax2 * persent;
 
-        if(colorLine.InBlock(windowTopLine, blockPosition) && colorLine.whereScroll(windowPosition).scroll == 1){
-            console.log("true");
-            colorLine.Down(line, linePosition);
-        } 
-        else if (colorLine.InBlock(windowTopLine, blockPosition) && colorLine.whereScroll(windowPosition).scroll == -1) {
-            colorLine.Up(line, linePosition);
+
+        if (colorLine.InBlock(windowTopLine, blockPosition)) {
+
+            if(persent > 0 && persent <= 1){
+                colorLine.Scroll(line2, linePosition2, windowPosition, speed2);
+            }
         }
-
-
     });

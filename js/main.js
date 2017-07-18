@@ -50,43 +50,41 @@ $(".header__mobile").click(function () {
 });
 var colorLine = (function () {
     var prevScrollPosition = null;
+    var Up = function (object, linePosition, speed) {
+        var maxValue = parseInt(object.css("stroke-dasharray")), value = maxValue - linePosition;
+        if (speed > value)
+            speed = value;
+        (linePosition >= 0 && linePosition <= maxValue) ? object.css("stroke-dashoffset", maxValue - speed) : object.css("stroke-dashoffset", maxValue);
+    };
+    var Down = function (object, linePosition, speed) {
+        var maxValue = parseInt(object.css("stroke-dasharray"));
+        console.log("Line Position " + linePosition);
+        console.log("Speed " + speed);
+        (linePosition >= 0) ? object.css("stroke-dashoffset", maxValue - speed) : object.css("stroke-dashoffset", 0);
+    };
     return {
         InBlock: function (windowTopLine, blockPosition) {
             return (windowTopLine >= blockPosition);
         },
-        whereScroll: function (windowPosition) {
-            var scroll = null, howToScroll = null;
+        Scroll: function (obj, linePosition, windowPosition, speed) {
+            var scroll = null;
             (prevScrollPosition > windowPosition) ? scroll = 1 : scroll = -1;
-            howToScroll = (prevScrollPosition - windowPosition) * scroll;
+            if (scroll == 1) {
+                Up(obj, linePosition, speed);
+            }
+            else if (scroll == -1) {
+                Down(obj, linePosition, speed);
+            }
             prevScrollPosition = windowPosition;
-            return {
-                scroll: scroll,
-                howToScroll: howToScroll
-            };
-        },
-        Up: function (object, linePosition) {
-            if (linePosition <= 0) {
-                object.css("stroke-dashoffset", linePosition + linePosition * 0.20);
-                console.log(linePosition);
-            }
-            ;
-        },
-        Down: function (object, linePosition) {
-            if (linePosition >= 0) {
-                object.css("stroke-dashoffset", linePosition - linePosition * 0.20);
-            }
-            ;
         }
     };
 })();
 $(document).scroll(function () {
-    var _window = $(window), block = $(".steps__line"), line = $(".steps__line_1"), linePosition = parseInt(line.css("stroke-dashoffset")), blockPadding = 125, blockPosition = block.offset().top, windowPosition = _window.scrollTop(), windowHeight = _window.outerHeight(), windowTopLine = windowPosition + windowHeight;
-    if (colorLine.InBlock(windowTopLine, blockPosition) && colorLine.whereScroll(windowPosition).scroll == 1) {
-        console.log("true");
-        colorLine.Down(line, linePosition);
-    }
-    else if (colorLine.InBlock(windowTopLine, blockPosition) && colorLine.whereScroll(windowPosition).scroll == -1) {
-        colorLine.Up(line, linePosition);
+    var _window = $(window), block = $(".steps"), line = $(".steps__line_1"), line2 = $(".steps__line_3"), lineMax = parseInt(line.css("stroke-dasharray")), lineMax2 = parseInt(line2.css("stroke-dasharray")), linePosition = parseInt(line.css("stroke-dashoffset")), linePosition2 = parseInt(line2.css("stroke-dashoffset")), blockHeight = block.innerHeight(), blockPosition = block.offset().top, windowPosition = _window.scrollTop(), windowHeight = _window.outerHeight(), windowTopLine = windowPosition + windowHeight - 125, persent = (windowTopLine - blockPosition) / blockHeight, speed1 = lineMax * persent, speed2 = lineMax2 * persent;
+    if (colorLine.InBlock(windowTopLine, blockPosition)) {
+        if (persent > 0 && persent <= 1) {
+            colorLine.Scroll(line2, linePosition2, windowPosition, speed2);
+        }
     }
 });
 //# sourceMappingURL=main.js.map
