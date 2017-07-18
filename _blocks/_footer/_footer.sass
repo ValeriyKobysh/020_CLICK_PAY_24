@@ -1,9 +1,7 @@
 .footer
     background-image: linear-gradient( 0deg, $blue-light-color 0%, $blue-color 100%)
-    height: 250px
     position: relative
     overflow: hidden
-    padding: 50px 0 55px
     box-sizing: border-box
 
     &:before
@@ -22,12 +20,10 @@
         height: 100%
         position: relative
         z-index: 1
+        box-sizing: border-box
 
-    &__logo
-        padding-right: 15px
-        
-        &-wrap
-            padding-left: 5px
+    &__logo, &__nav, &__partners
+        box-sizing: border-box
     
     &__copyright
         font-size: rem(15px)
@@ -37,8 +33,6 @@
 
     &__nav
         color: $white-color
-        padding-top: 5px
-        padding-left: 15px
 
         &-heading, &-link
             font-size: rem(16px)

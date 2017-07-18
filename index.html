@@ -14,25 +14,25 @@
         <div class="header__top">
           <div class="header__container container">
             <div class="flex-container ai-center jc-between"><a class="header__logo" href="/"><img class="header__img" src="img/logo.png" alt="Alternative text"/></a>
-              <div class="header__top-left flex-container ai-center">
+              <div class="header__top-right flex-container ai-center">
                 <nav class="header__nav">
                   <ul class="header__nav-list list flex-container">
                           <li class="header__nav-item"><a class="header__nav-link link" href="blog.html">Наш блог</a></li>
                           <li class="header__nav-item"><a class="header__nav-link link" href="blog.html">Поиск платежей</a></li>
                           <li class="header__nav-item"><a class="header__nav-link link" href="blog.html">Разработка сайтов</a></li>
                   </ul>
-                </nav>
-                <button class="header__btn btn btn_small btn_color">Войти</button>
+                </nav><a class="header__btn btn btn_small btn_color link" href="javascript:;">Войти</a>
               </div>
+              <button class="header__mobile"><span class="header__icon"></span></button>
             </div>
           </div>
         </div>
         <div class="header__content">
-          <div class="header__container container flex-container ai-center">
-            <div class="header__left column-6">
+          <div class="header__container container flex-container flex-col_xs ai-center">
+            <div class="header__left column-6_xl column-6_md column-12_xs">
               <h1 class="header__heading">ClickPay24 – комплекс решений для эффективной продажи ИНФОПРОДУКТОВ</h1><span class="header__slogan">Откройте для себя потенциал своего сайта.</span><span class="header__desc">Анализ. Решение. Результаты.</span><a class="btn btn_large btn_trans flex-container ai-center jc-center link" href="javascript:;">Подключить платежи</a>
             </div>
-            <div class="header__right flex-container jc-center column-6">
+            <div class="header__right flex-container jc-center column-6_xl column-6_md column-12_xs">
               <div class="header__video-block">
                 <iframe class="header__video" src="https://www.youtube.com/embed/5bRPTb3z2rU" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
               </div>
@@ -58,28 +58,28 @@
       </section>
       <section class="about">
         <div class="about__container container">
-          <div class="about__item flex-container">
+          <div class="about__item flex-container flex-col_xs">
             <div class="about__img-block about__img-block_odd"><img class="about__img about__img_1-1" src="img/about/1/1.png" alt=""/><img class="about__img about__img_1-2" src="img/about/1/2.png" alt=""/><img class="about__img about__img_1-3" src="img/about/1/3.png" alt=""/><img class="about__img about__img_1-4" src="img/about/1/4.png" alt=""/></div>
             <div class="about__text-block">
               <h3 class="about__heading">Система  внутренней аналитики</h3>
               <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam soluta corporis dolores dolor fuga laborum earum sint accusamus molestias vitae saepe, iusto. Quod numquam minus eum, praesentium maxime cupiditate quisquam magnam eos. Sit ea rem ipsa consectetur aut, inventore, voluptatibus deserunt placeat et ut dolorum tempora asperiores aliquid vero molestiae!</p>
             </div>
           </div>
-          <div class="about__item flex-container">
+          <div class="about__item flex-container flex-col_xs">
             <div class="about__text-block">
               <h3 class="about__heading about__heading_right">Система PUSH-уведомлений</h3>
               <p class="about__text about__text_right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam soluta corporis dolores dolor fuga laborum earum sint accusamus molestias vitae saepe, iusto. Quod numquam minus eum, praesentium maxime cupiditate quisquam magnam eos. Sit ea rem ipsa consectetur aut, inventore, voluptatibus deserunt placeat et ut dolorum tempora asperiores aliquid vero molestiae!</p>
             </div>
             <div class="about__img-block about__img-block_even"><img class="about__img about__img_2-1" src="img/about/2/1.png" alt=""/><img class="about__img about__img_2-2" src="img/about/2/2.png" alt=""/><img class="about__img about__img_2-3" src="img/about/2/3.png" alt=""/></div>
           </div>
-          <div class="about__item flex-container">
+          <div class="about__item flex-container flex-col_xs">
             <div class="about__img-block about__img-block_odd"><img class="about__img about__img_3-1" src="img/about/3/1.png" alt=""/><img class="about__img about__img_3-2" src="img/about/3/2.png" alt=""/><img class="about__img about__img_3-3" src="img/about/3/3.png" alt=""/></div>
             <div class="about__text-block">
               <h3 class="about__heading">Неограниченное количество форм оплат</h3>
               <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam soluta corporis dolores dolor fuga laborum earum sint accusamus molestias vitae saepe, iusto. Quod numquam minus eum, praesentium maxime cupiditate quisquam magnam eos. Sit ea rem ipsa consectetur aut, inventore, voluptatibus deserunt placeat et ut dolorum tempora asperiores aliquid vero molestiae!</p>
             </div>
           </div>
-          <div class="about__item flex-container">
+          <div class="about__item flex-container flex-col_xs">
             <div class="about__text-block">
               <h3 class="about__heading about__heading_right">Реклама своего продукта внутри сервиса</h3>
               <p class="about__text about__text_right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam soluta corporis dolores dolor fuga laborum earum sint accusamus molestias vitae saepe, iusto. Quod numquam minus eum, praesentium maxime cupiditate quisquam magnam eos. Sit ea rem ipsa consectetur aut, inventore, voluptatibus deserunt placeat et ut dolorum tempora asperiores aliquid vero molestiae!</p>
@@ -88,17 +88,51 @@
           </div>
         </div>
       </section>
+      <section class="steps">
+        <div class="steps__container container">
+          <svg class="steps__line steps__line_small" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 416 15.5" xml:space="preserve">
+            <path class="steps__line_1" d="M0,8.5h416"></path>
+            <path class="steps__line_4" d="M0,8.5h416"></path>
+          </svg>
+          <h2 class="steps__heading">Как это работает?</h2>
+          <svg class="steps__line steps__line_large" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1263.4 680" xml:space="preserve">
+            <path class="steps__line_2" d="M494.4,7.5l717,2c0,0,44.5,8,44.5,44.5s0,255.5,0,255.5s0,42.8-42.8,42.8s-1160.8,0-1160.8,0s-44.1-1-44.1,44.1 v238.1c0,0-2.9,38,38.1,38h640"></path>
+            <path class="steps__line_3" stroke-dasharray="3300" d="M494.4,7.5l717,2c0,0,44.5,8,44.5,44.5s0,255.5,0,255.5s0,42.8-42.8,42.8s-1160.8,0-1160.8,0s-44.1-1-44.1,44.1 v238.1c0,0-2.9,38,38.1,38h640"></path>
+          </svg>
+          <div class="steps__images-wrap">
+            <div class="steps__wrap steps__wrap_1">
+              <div class="steps__images steps__images_1"><img class="steps__img steps__img_1-1" src="img/steps/1/4.svg" alt=""/><img class="steps__img steps__img_1-2" src="img/steps/1/3.svg" alt=""/><img class="steps__img steps__img_1-3" src="img/steps/1/2.svg" alt=""/><img class="steps__img steps__img_1-4" src="img/steps/1/1.svg" alt=""/></div><span class="steps__title">Вы регистрируетесь на сайте</span>
+            </div>
+            <div class="steps__wrap steps__wrap_2">
+              <div class="steps__images steps__images_2"><img class="steps__img steps__img_2-1" src="img/steps/2/1.svg" alt=""/><img class="steps__img steps__img_2-2" src="img/steps/2/2.svg" alt=""/></div><span class="steps__title">Подключаете свой сайт</span>
+            </div>
+            <div class="steps__wrap steps__wrap_3">
+              <div class="steps__images steps__images_3"><img class="steps__img steps__img_3-1" src="img/steps/3/1.svg" alt=""/><img class="steps__img steps__img_3-2" src="img/steps/3/2.svg" alt=""/><img class="steps__img steps__img_3-3" src="img/steps/3/3.svg" alt=""/><img class="steps__img steps__img_3-4" src="img/steps/3/4.svg" alt=""/></div><span class="steps__title">Выбираете платежные формы</span>
+            </div>
+            <div class="steps__wrap steps__wrap_4">
+              <div class="steps__images steps__images_4"><img class="steps__img steps__img_4-1" src="img/steps/4/1.svg" alt=""/><img class="steps__img steps__img_4-2" src="img/steps/4/2.svg" alt=""/><img class="steps__img steps__img_4-3" src="img/steps/4/3.svg" alt=""/><img class="steps__img steps__img_4-4" src="img/steps/4/4.svg" alt=""/></div><span class="steps__title">Покупатель выбирает Ваш инфо продукт </span>
+            </div>
+            <div class="steps__wrap steps__wrap_5">
+              <div class="steps__images steps__images_5"><img class="steps__img steps__img_5-1" src="img/steps/5/1.svg" alt=""/><img class="steps__img steps__img_5-2" src="img/steps/5/2.svg" alt=""/><img class="steps__img steps__img_5-3" src="img/steps/5/3.svg" alt=""/></div><span class="steps__title">Попадает в платежный шлюз выбирает способы оплаты оплачивает товар</span>
+            </div>
+            <div class="steps__wrap steps__wrap_6">
+              <div class="steps__images steps__images_6"><img class="steps__img steps__img_6-1" src="img/steps/6/1.svg" alt=""/><img class="steps__img steps__img_6-2" src="img/steps/6/2.svg" alt=""/><img class="steps__img steps__img_6-3" src="img/steps/6/3.svg" alt=""/><img class="steps__img steps__img_6-4" src="img/steps/6/4.svg" alt=""/></div><span class="steps__title">Вы получаете уведомление и успешно заказываете выплату</span>
+            </div>
+          </div>
+          <div class="steps__test-block flex-container flex-col ai-center"><span class="steps__test-title">Протестируйте сервис уже сегодня</span><a class="steps__test-btn btn btn_color btn_large link" href="javascript:;">Протестировать</a></div>
+        </div>
+      </section>
       <section class="result">
         <div class="result__container container">
           <div class="result__header">
             <h2 class="result__heading">Clickpay24 отличные результаты в короткие сроки</h2><span class="result__desc">Пакет наших решений – настоящий «фулл-хаус» для инфо-предпринимателей</span>
           </div>
-          <div class="result__content flex-container">
-            <div class="result__left column-7">
+          <div class="result__content flex-container flex-col_md flex-col_xs">
+            <div class="result__left column-7_xl column-12_md column-12_xs">
               <p class="result__text">Вы создаете удивительные веб-сайты, но не знаете, как привлечь к нему больше внимания? Начните свою первую кампанию в <span class="result__text_mark">Clickpay24</span>! Даже если вы новичок в инфобизнесе, теперь у вас есть все необходимое для продвижения своего продукта в Интернете. </p>
               <p class="result__text">Вы можете использовать набор наших инструментов  для своих проектов, или вы можете стать партнером, предоставляя услуги сайтов за достойное вознаграждение. Пусть <span class="result__text_mark">Clickpay24 </span>работает для вас! Бесплатный доступ, быстрые результаты, 100% эффективность.</p>
             </div>
-            <div class="result__right column-5">
+            <div class="result__right column-5_xl column-12_md column-12_xs">
               <ul class="result__list list">
                       <li class="result__item flex-container"><span class="result__icon"></span><span class="result__title">Повышение узнаваемости продукта в глазах целевой аудитории</span></li>
                       <li class="result__item flex-container"><span class="result__icon"></span><span class="result__title">Отчеты по аналитике кампаний</span></li>
@@ -111,18 +145,18 @@
         </div>
       </section>
       <section class="subscribe">
-        <div class="subscribe__container container flex-container ai-center jc-center">
-          <h2 class="heading heading_dark">НАЧАТЬ ПРИНИМАТЬ ПЛАТЕЖИ</h2>
+        <div class="subscribe__container container flex-container ai-center jc-center flex-col_xs">
+          <h2 class="subscribe__heading">НАЧАТЬ ПРИНИМАТЬ ПЛАТЕЖИ</h2>
           <button class="subscribe__btn btn btn_large btn_color">Приступить</button>
         </div>
       </section>
     </div>
     <footer class="footer">
-      <div class="footer__container container flex-container">
-        <div class="footer__logo column-6 flex-container flex-col jc-between"><a class="footer__logo-wrap" href="/"><img src="img/logo.png" alt=""/></a>
+      <div class="footer__container container flex-container flex-wrap_md flex-col_xs">
+        <div class="footer__logo column-6_xl flex-container flex-col jc-between"><a class="footer__logo-wrap" href="/"><img src="img/logo.png" alt=""/></a>
           <div class="footer__copyright">© 2015–2017 ClickPay24.tv. <br /> Сервис моментального приема платежей и каталог партнерских программ.</div>
         </div>
-        <div class="footer__nav column-2">
+        <div class="footer__nav column-2_xl">
           <h3 class="footer__nav-heading">Навигация</h3>
           <nav class="footer__nav-block">
             <ul class="footer__nav-list list">
@@ -132,7 +166,7 @@
             </ul>
           </nav>
         </div>
-        <div class="footer__partners column-4 flex-container jc-end ai-end">
+        <div class="footer__partners column-4_xl flex-container jc-end_xl ai-end">
           <ul class="footer__partners-list list flex-container">
                 <li class="footer__partners-item"><img src="img/footer-partners/1.png" alt="Alternative Text"/></li>
                 <li class="footer__partners-item"><img src="img/footer-partners/2.png" alt="Alternative Text"/></li>

@@ -1,0 +1,37 @@
+.header
+
+    &__top-right
+        display: none
+        position: absolute
+        background-color: $white-color
+        width: $xs - 30
+        height: 190px
+        right: 15px
+        top: 45px
+        border-radius: 15px 0 15px 15px
+        z-index: 2
+        padding: 20px 30px
+        box-sizing: border-box
+
+        &.active
+            display: flex
+            flex-direction: column
+
+    &__nav
+        width: 100%
+        margin-bottom: 10px
+
+        &-list
+            flex-direction: column
+
+        &-link
+            color:  $text-dark-color
+            display: block
+            margin-bottom: 15px
+
+    &__video-block
+        width: $xs - 30
+
+    &__desc
+        margin-bottom: 25px
+

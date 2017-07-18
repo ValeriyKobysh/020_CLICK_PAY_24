@@ -43,7 +43,50 @@
         return this.each(make);
     };
 })(jQuery);
-$(document).click(function (e) {
-    console.log(e.target);
+$(".header__mobile").click(function () {
+    var _this = $(this), menu = $('.header__top-right');
+    _this.toggleClass('active');
+    menu.toggleClass('active');
+});
+var colorLine = (function () {
+    var prevScrollPosition = null;
+    return {
+        InBlock: function (windowTopLine, blockPosition) {
+            return (windowTopLine >= blockPosition);
+        },
+        whereScroll: function (windowPosition) {
+            var scroll = null, howToScroll = null;
+            (prevScrollPosition > windowPosition) ? scroll = 1 : scroll = -1;
+            howToScroll = (prevScrollPosition - windowPosition) * scroll;
+            prevScrollPosition = windowPosition;
+            return {
+                scroll: scroll,
+                howToScroll: howToScroll
+            };
+        },
+        Up: function (object, linePosition) {
+            if (linePosition <= 0) {
+                object.css("stroke-dashoffset", linePosition + linePosition * 0.20);
+                console.log(linePosition);
+            }
+            ;
+        },
+        Down: function (object, linePosition) {
+            if (linePosition >= 0) {
+                object.css("stroke-dashoffset", linePosition - linePosition * 0.20);
+            }
+            ;
+        }
+    };
+})();
+$(document).scroll(function () {
+    var _window = $(window), block = $(".steps__line"), line = $(".steps__line_1"), linePosition = parseInt(line.css("stroke-dashoffset")), blockPadding = 125, blockPosition = block.offset().top, windowPosition = _window.scrollTop(), windowHeight = _window.outerHeight(), windowTopLine = windowPosition + windowHeight;
+    if (colorLine.InBlock(windowTopLine, blockPosition) && colorLine.whereScroll(windowPosition).scroll == 1) {
+        console.log("true");
+        colorLine.Down(line, linePosition);
+    }
+    else if (colorLine.InBlock(windowTopLine, blockPosition) && colorLine.whereScroll(windowPosition).scroll == -1) {
+        colorLine.Up(line, linePosition);
+    }
 });
 //# sourceMappingURL=main.js.map

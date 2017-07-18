@@ -8,21 +8,23 @@ header.header.flex-container.flex-col
             .flex-container.ai-center.jc-between
                 a.header__logo(href="/")
                     img.header__img(src="img/logo.png", alt="Alternative text")
-                .header__top-left.flex-container.ai-center
+                .header__top-right.flex-container.ai-center
                     nav.header__nav
                         ul.header__nav-list.list.flex-container
                             +headerNavItem("blog.html", "Наш блог")
                             +headerNavItem("blog.html", "Поиск платежей")
                             +headerNavItem("blog.html", "Разработка сайтов")
-                    button.header__btn.btn.btn_small.btn_color Войти
+                    a.header__btn.btn.btn_small.btn_color.link(href="javascript:;") Войти
+                button.header__mobile
+                    span.header__icon
     .header__content
-        .header__container.container.flex-container.ai-center
-            .header__left.column-6
+        .header__container.container.flex-container.flex-col_xs.ai-center
+            .header__left.column-6_xl.column-6_md.column-12_xs
                 h1.header__heading ClickPay24 – комплекс решений для эффективной продажи ИНФОПРОДУКТОВ
                 span.header__slogan Откройте для себя потенциал своего сайта.
                 span.header__desc Анализ. Решение. Результаты.
                 a.btn.btn_large.btn_trans.flex-container.ai-center.jc-center.link(href="javascript:;") Подключить платежи
-            .header__right.flex-container.jc-center.column-6
+            .header__right.flex-container.jc-center.column-6_xl.column-6_md.column-12_xs
                 .header__video-block
                     iframe.header__video(src="https://www.youtube.com/embed/5bRPTb3z2rU" frameborder="0" allowfullscreen)
     span.header__images.header__images_1

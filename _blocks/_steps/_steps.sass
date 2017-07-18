@@ -1,0 +1,223 @@
+.steps
+    background-color: $blue-color
+    position: relative
+    overflow: hidden
+    box-sizing: border-box
+
+    &:before
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 0
+        display: inline-block
+        border-left: solid 800px lighten($blue-color, 8.5%)
+        border-bottom: solid 800px lighten($blue-color, 8.5%)
+        border-top: solid 800px transparent
+        border-right: solid 800px transparent
+
+    &__container
+        position: relative
+        height: 100%
+
+    &__line
+        fill: none
+        position: absolute
+        width: 100%
+
+        &_small
+            transform: translateX(-100%)
+            stroke-width: 4px    
+            top: -11px
+
+        &_large
+            stroke-width: 12px
+            top: 5px
+
+        &_1
+            stroke: $purple-color
+
+        &_2
+            stroke: $white-color
+            stroke-opacity: .2
+
+        &_3
+            stroke: $white-color
+    
+    &__heading
+        color: $text-light-color
+        text-transform: uppercase
+        font-weight: 700
+        line-height: rem(24px)
+        text-align: center
+
+    &__wrap
+        display: flex
+        flex-direction: column
+        align-items: center
+
+
+    &__images
+        position: relative
+        text-align: center
+        margin-bottom: 30px
+        +size(170px)
+
+        &:hover
+
+            .steps__img
+
+                &_1-1
+
+                &_2-2
+                    animation-name: impuls
+                    animation-iteration-count: infinite
+                    animation-timing-function: linear
+                    animation-duration: 1s
+
+
+    &__img
+        position: absolute
+
+        &_1-1
+            height: 156px
+            z-index: 0
+            top: 0
+            left: 0
+        
+        &_1-2
+            +size(65px, 73px)
+            z-index: 1
+            right: 5px
+
+        &_1-3
+            +size(120px, 110px)
+            z-index: 2
+            top: 20px
+            left: 5px
+
+        &_1-4
+            +size(70px, 85px)
+            z-index: 3
+            right: 12px
+            bottom: 10px
+        
+        &_2-1
+            height: 160px
+            z-index: 0
+            left: 0
+            top: 0
+        
+        &_2-2
+            height: 70px
+            z-index: 1
+            top: 57%
+            left: 40%
+
+        &_3-1
+            height: 165px
+            left: 0
+
+        &_3-2
+            height: 14px
+            top: 2px
+            left: 55px
+
+        &_3-3
+            height: 26px
+            right: 25px
+            top: 25px
+
+        &_3-4
+            height: 35px
+            left: 10px
+            top: 25px
+
+        &_4-1
+            height: 158px
+            left: 0
+            top: 0
+
+        &_4-2
+            height: 92px
+            left: -7px
+            top: 20px
+
+        &_4-3
+            top: -30px
+            left: 55px
+            height: 55px
+
+        &_4-4
+            bottom: -17px
+            left: 14px
+            height: 100px
+
+        &_5-1
+            height: 170px
+            left: 3px
+            top: 0
+
+        &_5-2
+            height: 42px
+            left: 5px
+            top: 23%
+
+        &_5-3
+            top: 19%
+            right: 3%
+            height: 70px
+
+        &_6-1
+            left: 0
+            top: 0
+            height: 160px
+        
+        &_6-2
+            left: 20px
+            top: 12px
+            height: 40px
+
+        &_6-3
+            top: 15px
+            right: 23px
+            height: 35px
+
+        &_6-4
+            bottom: 20px
+            right: 10px
+            height: 60px
+
+    &__title
+        font-size: rem(19px)
+        line-height: 24px
+        color: $text-light-color
+        text-align: center
+
+    &__test
+
+        &-block
+
+        &-title
+            color: $text-light-color
+            text-transform: uppercase
+            font-weight: 700
+            line-height: rem(38px)
+            text-align: center
+            margin-bottom: 33px
+
+        &-btn
+            display: flex
+            align-items: center
+            justify-content: center
+
+
+@keyframes impuls
+
+    0%
+        transform: scale(1)
+
+    50%
+        transform: scale(1.2)
+
+    100%
+        transform: scale(1)

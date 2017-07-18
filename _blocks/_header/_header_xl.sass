@@ -1,0 +1,47 @@
+.header
+
+    &__mobile
+        display: none
+
+    &__nav
+
+        &-item
+            margin-left: 50px
+
+            &:first-child
+                margin-left: 0
+
+        &-link
+            color: $text-light-color
+            font-size: rem(15px)
+            line-height: rem(24px)
+            +transition(color)
+
+            &:hover, &:active
+                color: $text-medium-color
+
+    &__content
+        height: 700px
+
+    &__logo
+        +size(200px, 60px)
+
+    &__btn
+        margin-left: 38px
+
+    &__video-block
+        +size(460px, 375px)
+
+    &__heading
+        font-size: rem(30px)
+        line-height: rem(40px)
+
+    &__slogan
+        font-size: rem(18px)
+
+    &__left
+        height: 400px
+        padding-left: 10px
+
+    &__desc
+        margin-bottom: 50px

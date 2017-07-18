@@ -1,5 +1,4 @@
 .brands
-    height: 200px
     background-color: #daf0f7
     overflow: hidden
 
@@ -8,6 +7,14 @@
     
     &__list
         width: 100%
+        overflow: hidden
+        margin: 0 auto
 
     &__item
-        // width: 10%
+        text-align: center
+        flex-shrink: 0
+        padding: 0 10px
+        box-sizing: border-box
+
+        & > img
+            max-width: 100%

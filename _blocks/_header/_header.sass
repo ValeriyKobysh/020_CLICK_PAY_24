@@ -16,9 +16,10 @@
 
     &__container
         height: 100%
+        position: relative
     
     &__top, &__content
-        z-index: 1
+        // z-index: 1
 
     &__top
         height: 100px
@@ -29,7 +30,6 @@
 
     &__content
         flex-grow: 1
-        height: 700px
 
     &__logo
         padding-left: 6px
@@ -37,44 +37,68 @@
         & > img
             max-width: 100%
 
-    &__nav
-
-        &-item
-            margin-left: 50px
-
-            &:first-child
-                margin-left: 0
-
-        &-link
-            color: $text-light-color
-            font-size: rem(15px)
-            line-height: rem(24px)
-            +transition(color)
-
-            &:hover, &:active
-                color: $text-medium-color
-
     &__btn
-        margin-left: 38px
+        display: flex
+        align-items: center
+        justify-content: center
+
+    &__mobile
+        border: 0
+        outline: none
+        background-color: transparent
+        +size(30px)
+        cursor: pointer
+
+        &.active .header__icon
+    
+            &:after
+                width: 28px
+
+            &:before
+                width: 20px
+
+    &__icon
+        position: relative
+        display: block
+        +size(28px, 2px)
+        margin: 0 auto
+        background-color: $white-color
+
+        &:after, &:before
+            content: ""
+            background-color: $white-color
+            height: 2px
+            display: block
+            position: absolute
+            right: 0
+            +transition()
+
+        &:after
+            width: 20px
+            bottom: -7px
+            
+
+        &:before
+            width: 28px
+            top: -7px
 
     &__video-block
         background-color: $white-color
-        +size(460px, 375px)
         border-radius: 20px
         overflow: hidden
+        position: relative
+        z-index: 1
 
     &__video
         +size(100%)
 
     &__left
         color: $text-light-color
-        padding-left: 10px
-        height: 400px
+        position: relative
+        z-index: 1
 
     &__heading
         font-weight: 700
-        font-size: rem(30px)
-        line-height: rem(40px)
         text-transform: uppercase
         margin-bottom: 13px
     
@@ -83,18 +107,16 @@
         line-height: rem(24px)
 
     &__slogan
-        font-size: rem(18px)
         font-weight: 300
         margin-bottom: 9px
 
     &__desc
         font-style: italic
         font-size: rem(15px)
-        margin-bottom: 50px
+        
 
     &__images
         position: absolute
-        z-index: 1
         animation-iteration-count: infinite
         animation-duration: 5s
         animation-fill-mode: forwards

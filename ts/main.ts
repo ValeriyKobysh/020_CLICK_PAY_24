@@ -43,6 +43,76 @@
         }
     })(jQuery)
 
-$(document).click(function(e){
-    console.log(e.target);
-});
+//### Mobile menu ###
+    $(".header__mobile").click(function(){
+        let _this = $(this),
+            menu = $('.header__top-right');
+
+        _this.toggleClass('active');
+        menu.toggleClass('active');
+    });
+
+//### Animate line ###
+    var colorLine = (function(){
+        let prevScrollPosition: number = null;
+
+        return {
+
+            InBlock: function(windowTopLine: number, blockPosition: number){
+                return (windowTopLine >= blockPosition);
+            },
+            
+            whereScroll: function (windowPosition: number) {
+
+                let scroll: number = null,
+                    howToScroll: number = null;
+
+                (prevScrollPosition > windowPosition) ? scroll = 1 : scroll = -1;
+                howToScroll = (prevScrollPosition - windowPosition) * scroll; 
+
+                prevScrollPosition = windowPosition;
+
+                return {
+                    scroll: scroll,
+                    howToScroll: howToScroll
+                };
+            },
+
+            Up: function(object: any, linePosition:number){
+                if(linePosition <= 0){
+                    object.css("stroke-dashoffset", linePosition + linePosition*0.20);
+                    console.log(linePosition);
+                };
+            },
+
+            Down: function(object: any, linePosition:number, ){
+                if(linePosition >= 0){
+                    object.css("stroke-dashoffset", linePosition - linePosition*0.20);
+                };
+            }
+
+        };
+    })();
+
+
+    $(document).scroll(function(){
+        let _window = $(window),
+            block = $(".steps__line"),
+            line = $(".steps__line_1"),
+            linePosition: number = parseInt(line.css("stroke-dashoffset")),
+            blockPadding: number = 125,
+            blockPosition: number = block.offset().top,
+            windowPosition: number = _window.scrollTop(),
+            windowHeight: number = _window.outerHeight(),
+            windowTopLine: number = windowPosition + windowHeight;
+
+        if(colorLine.InBlock(windowTopLine, blockPosition) && colorLine.whereScroll(windowPosition).scroll == 1){
+            console.log("true");
+            colorLine.Down(line, linePosition);
+        } 
+        else if (colorLine.InBlock(windowTopLine, blockPosition) && colorLine.whereScroll(windowPosition).scroll == -1) {
+            colorLine.Up(line, linePosition);
+        }
+
+
+    });
