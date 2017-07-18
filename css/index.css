@@ -613,17 +613,11 @@ body {
     margin-bottom: 30px;
     width: 170px;
     height: 170px; }
-    .steps__images:hover .steps__img_2-2 {
-      -webkit-animation-name: impuls;
-      animation-name: impuls;
-      -webkit-animation-iteration-count: infinite;
-      animation-iteration-count: infinite;
-      -webkit-animation-timing-function: linear;
-      animation-timing-function: linear;
-      -webkit-animation-duration: 1s;
-      animation-duration: 1s; }
   .steps__img {
-    position: absolute; }
+    position: absolute;
+    -webkit-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    transition-duration: .5s; }
     .steps__img_1-1 {
       height: 156px;
       z-index: 0;
@@ -740,28 +734,6 @@ body {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center; }
-
-@-webkit-keyframes impuls {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1); }
-  50% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2); }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1); } }
-
-@keyframes impuls {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1); }
-  50% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2); }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1); } }
 
 .result {
   background-color: #e5f8fd;
@@ -1243,6 +1215,56 @@ body {
       font-size: 2.25rem;
       width: 410px;
       margin-left: 40px; }
+    .steps__images:hover .steps__img_1-2 {
+      right: -30px; }
+    .steps__images:hover .steps__img_1-3 {
+      top: 20px;
+      left: -20px; }
+    .steps__images:hover .steps__img_1-4 {
+      right: -10px;
+      bottom: -20px; }
+    .steps__images:hover .steps__img_2-2, .steps__images:hover .steps__img_4-2, .steps__images:hover .steps__img_4-4 {
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards; }
+    .steps__images:hover .steps__img_2-2, .steps__images:hover .steps__img_4-4 {
+      -webkit-animation-name: impuls;
+      animation-name: impuls;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s; }
+    .steps__images:hover .steps__img_3-2 {
+      top: -20px; }
+    .steps__images:hover .steps__img_3-3 {
+      right: 0; }
+    .steps__images:hover .steps__img_3-4 {
+      left: -20px; }
+    .steps__images:hover .steps__img_4-2 {
+      left: -30px;
+      top: 0;
+      -webkit-animation-name: rotate;
+      animation-name: rotate;
+      -webkit-animation-duration: 3s;
+      animation-duration: 3s; }
+    .steps__images:hover .steps__img_4-3 {
+      top: -50px; }
+    .steps__images:hover .steps__img_5-2 {
+      left: -15px;
+      top: 18%; }
+    .steps__images:hover .steps__img_5-3 {
+      top: 35%;
+      right: -10%; }
+    .steps__images:hover .steps__img_6-2 {
+      left: 10px;
+      top: -10px; }
+    .steps__images:hover .steps__img_6-3 {
+      top: 0;
+      right: 0; }
+    .steps__images:hover .steps__img_6-4 {
+      bottom: 0px;
+      right: -10px; }
     .steps__wrap {
       position: absolute;
       z-index: 10; }
@@ -1276,7 +1298,35 @@ body {
       right: 5px;
       width: 360px; }
     .steps__test-title {
-      font-size: 1.625rem; } }
+      font-size: 1.625rem; }
+  @-webkit-keyframes impuls {
+    0% {
+      -webkit-transform: scale(1);
+      transform: scale(1); }
+    50% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1); }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1); } }
+  @keyframes impuls {
+    0% {
+      -webkit-transform: scale(1);
+      transform: scale(1); }
+    50% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1); }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1); } }
+  @-webkit-keyframes rotate {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg); } }
+  @keyframes rotate {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg); } } }
 
 @media (max-width: 767px) {
   .container {
