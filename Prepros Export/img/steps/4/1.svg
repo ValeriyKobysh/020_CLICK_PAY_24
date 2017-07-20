@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Web_and_Development" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 1064 1064" style="enable-background:new 0 0 1064 1064;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFB85A;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#F4B147;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#F45858;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#E6E6E6;}
+	.st4{fill:#1E2F47;}
+	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#718CC7;}
+	.st6{opacity:0.2;}
+	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#FFCC00;}
+	.st8{opacity:0.1;fill-rule:evenodd;clip-rule:evenodd;}
+</style>
+<g id="World_Web">
+	<g id="Background">
+		<circle id="Background_2" class="st0" cx="532" cy="532" r="532"/>
+	</g>
+	<g id="World_Web_2_">
+		<g id="Books_1_">
+			<rect x="584.8" y="445.2" class="st1" width="443.7" height="110.9"/>
+			<rect x="630.9" y="360.3" class="st2" width="351.5" height="84.2"/>
+			<path class="st3" d="M705.1,270.5h226.6c0,0-39.4,13.8-38.5,40.4c1,26,38.5,43.8,38.5,43.8H705.1c-23.2,0-42.1-18.9-42.1-42.1
+				l0,0C663,289.4,681.9,270.5,705.1,270.5L705.1,270.5z"/>
+			<path class="st4" d="M705.1,265.2h226.6c0.5,0,1.1,0,1.7,0v10.7c-0.6,0-1.1,0-1.7,0H705.1c-10.1,0-19.3,4.2-26,10.8
+				c-6.7,6.7-10.8,15.9-10.8,25.9l0,0c0,10.1,4.1,19.3,10.8,26c6.7,6.6,15.8,10.8,26,10.8h226.6c0.5,0,1.1,0,1.7,0V360
+				c-0.6,0-1.1,0-1.7,0H705.1c-13,0-24.9-5.3-33.5-13.9c-8.6-8.6-13.9-20.5-13.9-33.5l0,0c0-13,5.3-24.9,13.9-33.5
+				C680.2,270.5,692.1,265.2,705.1,265.2L705.1,265.2z"/>
+			<rect x="694.8" y="292.9" class="st5" width="177.1" height="1.7"/>
+			<rect x="681" y="305.1" class="st5" width="177.1" height="1.7"/>
+			<rect x="697.4" y="317.4" class="st5" width="177.1" height="1.7"/>
+			<polygon class="st6" points="740.9,294.6 843,349.4 754.1,349.4 715.6,339.5 			"/>
+			<rect x="699.1" y="331.8" class="st5" width="184.6" height="1.7"/>
+			<polygon class="st7" points="715.6,294.6 740.9,294.6 740.9,339.5 728.5,331.8 715.6,339.5 			"/>
+			<path class="st8" d="M715.6,302.5c6.6-0.9,15.7-1.1,25.2,1.9v-9.9h-25.2V302.5z"/>
+			<rect x="630.9" y="402.4" class="st8" width="351.5" height="42.1"/>
+			<rect x="584.8" y="505" class="st8" width="443.7" height="51.2"/>
+		</g>
+	</g>
+</g>
+</svg>

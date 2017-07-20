@@ -391,154 +391,34 @@ body {
     position: absolute;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards; }
     .header__images_1 {
-      top: 22%;
-      left: 10%;
-      -webkit-animation-name: images-1;
-      animation-name: images-1; }
+      top: 150px;
+      left: 190px; }
+      .header__images_1:hover {
+        -webkit-animation-name: images-1;
+        animation-name: images-1; }
     .header__images_2 {
-      bottom: 3.5%;
-      left: 15%;
-      -webkit-animation-name: images-2;
-      animation-name: images-2; }
+      bottom: 35px;
+      left: 350px; }
+      .header__images_2:hover {
+        -webkit-animation-name: images-2;
+        animation-name: images-2; }
     .header__images_3 {
-      top: 15%;
-      left: 32%;
-      -webkit-animation-name: images-3;
-      animation-name: images-3; }
+      top: 120px;
+      left: 610px; }
     .header__images_4 {
-      bottom: 14%;
-      left: 50%;
-      -webkit-animation-name: images-4;
-      animation-name: images-4; }
+      bottom: 85px;
+      left: 835px; }
     .header__images_5 {
-      top: 13%;
-      right: 40%;
-      -webkit-animation-name: images-5;
-      animation-name: images-5; }
+      top: 110px;
+      right: 585px; }
     .header__images_6 {
-      bottom: -6%;
-      right: 25%;
-      -webkit-animation-name: images-6;
-      animation-name: images-6; }
-
-@-webkit-keyframes images-1 {
-  0% {
-    left: 11%; }
-  50% {
-    left: 10%; }
-  100% {
-    left: 11%; } }
-
-@keyframes images-1 {
-  0% {
-    left: 11%; }
-  50% {
-    left: 10%; }
-  100% {
-    left: 11%; } }
-
-@-webkit-keyframes images-2 {
-  0% {
-    left: 16%; }
-  50% {
-    left: 17%; }
-  100% {
-    left: 16%; } }
-
-@keyframes images-2 {
-  0% {
-    left: 16%; }
-  50% {
-    left: 17%; }
-  100% {
-    left: 16%; } }
-
-@-webkit-keyframes images-3 {
-  0% {
-    top: 15%;
-    left: 32%; }
-  50% {
-    top: 16%;
-    left: 33%; }
-  100% {
-    top: 15%;
-    left: 32%; } }
-
-@keyframes images-3 {
-  0% {
-    top: 15%;
-    left: 32%; }
-  50% {
-    top: 16%;
-    left: 33%; }
-  100% {
-    top: 15%;
-    left: 32%; } }
-
-@-webkit-keyframes images-4 {
-  0% {
-    bottom: 14%;
-    left: 50%; }
-  50% {
-    bottom: 13%;
-    left: 49%; }
-  100% {
-    bottom: 14%;
-    left: 50%; } }
-
-@keyframes images-4 {
-  0% {
-    bottom: 14%;
-    left: 50%; }
-  50% {
-    bottom: 13%;
-    left: 49%; }
-  100% {
-    bottom: 14%;
-    left: 50%; } }
-
-@-webkit-keyframes images-5 {
-  0% {
-    top: 13%;
-    right: 40%; }
-  50% {
-    top: 12%;
-    right: 39%; }
-  100% {
-    top: 13%;
-    right: 40%; } }
-
-@keyframes images-5 {
-  0% {
-    top: 13%;
-    right: 40%; }
-  50% {
-    top: 12%;
-    right: 39%; }
-  100% {
-    top: 13%;
-    right: 40%; } }
-
-@-webkit-keyframes images-6 {
-  0% {
-    bottom: -6%; }
-  50% {
-    bottom: 0%; }
-  100% {
-    bottom: -6%; } }
-
-@keyframes images-6 {
-  0% {
-    bottom: -6%; }
-  50% {
-    bottom: 0%; }
-  100% {
-    bottom: -6%; } }
+      bottom: -50px;
+      right: 390px; }
 
 .brands {
   background-color: #daf0f7;
