@@ -1,0 +1,14 @@
+mixin statItems(number, text)
+    li.stat__item
+        span.stat__number(data-value=number data-position="0") 0
+        span.stat__text #{text}
+
+
+section.stat
+    .stat__container.container
+        ul.stat__list.list.flex-container.ai-center.jc-around
+            +statItems(60197, "количество партнеров")
+            +statItems(12196, "количество товаров")
+            +statItems(20455848, "партнерских переходов")
+            +statItems(91443564, "количество транзакций")
+            +statItems(60365997, "сумма выплат")

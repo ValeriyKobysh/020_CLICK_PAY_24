@@ -13,6 +13,7 @@
 @import "../_blocks/_header/_header"
 @import "../_blocks/_brands/_brands"
 @import "../_blocks/_about/_about"
+@import "../_blocks/_stat/_stat"
 @import "../_blocks/_steps/_steps"
 @import "../_blocks/_result/_result"
 @import "../_blocks/_subscribe/_subscribe"
@@ -27,6 +28,7 @@
 @include media-breakpoint-up($md)
     @import "_btn/_btn_md_to_xl"
     @import "../_blocks/_result/_result_md_to_xl"
+    @import "../_blocks/_stat/_stat_md_to_xl"
     @import "../_blocks/_steps/_steps_md_to_xl"
     @import "../_blocks/_footer/_footer_md_to_xl"
 
@@ -49,6 +51,7 @@
     @import "../_blocks/_subscribe/_subscribe_xl"
     @import "../_blocks/_footer/_footer_xl"
     @import "../_blocks/_steps/_steps_xl"
+    @import "../_blocks/_stat/_stat_xl"
 
 //=====================================================
 
@@ -71,6 +74,7 @@
     @import "../_blocks/_subscribe/_subscribe_xs"
     @import "../_blocks/_footer/_footer_xs"
     @import "../_blocks/_steps/_steps_xs"
+    @import "../_blocks/_stat/_stat_xs"
 
 // Medium devices (tablets, less than 768px)
 @include media-breakpoint-down($md)  
@@ -86,6 +90,7 @@
     @import "../_blocks/_result/_result_xs_to_md"
     @import "../_blocks/_footer/_footer_xs_to_md"
     @import "../_blocks/_steps/_steps_xs_to_md"
+    @import "../_blocks/_stat/_stat_xs_to_md"
 
 //=====================================================
 
@@ -113,6 +118,7 @@
     @import "../_blocks/_subscribe/_subscribe_md"
     @import "../_blocks/_footer/_footer_md"
     @import "../_blocks/_steps/_steps_md"
+    @import "../_blocks/_stat/_stat_md"
 
 // Apply styles starting from small devices(576px) and up to medium devices(768px)
 @include media-breakpoint-between($sm, $md) 

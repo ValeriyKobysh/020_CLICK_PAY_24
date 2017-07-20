@@ -58,8 +58,6 @@ var colorLine = (function () {
     };
     var Down = function (object, linePosition, speed) {
         var maxValue = parseInt(object.css("stroke-dasharray"));
-        console.log("Line Position " + linePosition);
-        console.log("Speed " + speed);
         (linePosition >= 0) ? object.css("stroke-dashoffset", maxValue - speed) : object.css("stroke-dashoffset", 0);
     };
     return {
@@ -87,4 +85,22 @@ $(document).scroll(function () {
         }
     }
 });
+(function () {
+    var numb = $('.stat__number');
+    setInterval(function () { countTimer(numb, 0); }, 50);
+    setInterval(function () { countTimer(numb, 1); }, 50);
+    setInterval(function () { countTimer(numb, 2); }, 50);
+    setInterval(function () { countTimer(numb, 3); }, 50);
+    setInterval(function () { countTimer(numb, 4); }, 50);
+})();
+function countTimer(elements, item) {
+    var arr = elements, element = arr[item], value = element.getAttribute('data-value'), step = parseInt(value / ((item + 1) * 10)), postion = element.getAttribute('data-position'), start = (parseInt(postion) == 0) ? step : parseInt(postion) + step;
+    if ((value - start) < step) {
+        start = value;
+    }
+    ;
+    element.textContent = start.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+    element.setAttribute('data-position', start);
+    clearInterval(countTimer);
+}
 //# sourceMappingURL=main.js.map

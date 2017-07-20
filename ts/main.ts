@@ -69,8 +69,6 @@
         let Down =  function(object: any, linePosition:number, speed: number){
             let maxValue: number = parseInt(object.css("stroke-dasharray"));
 
-            console.log("Line Position " + linePosition);
-            console.log("Speed " + speed);
             // if(speed > linePosition) speed = linePosition;
 
                 (linePosition >= 0) ? object.css("stroke-dashoffset", maxValue - speed) : object.css("stroke-dashoffset", 0);
@@ -131,3 +129,35 @@
             }
         }
     });
+
+//### Statistic section ###
+
+    (function(){
+        let numb = $('.stat__number');
+
+        setInterval(function(){countTimer(numb, 0)}, 50);
+        setInterval(function(){countTimer(numb, 1)}, 50);
+        setInterval(function(){countTimer(numb, 2)}, 50);
+        setInterval(function(){countTimer(numb, 3)}, 50);
+        setInterval(function(){countTimer(numb, 4)}, 50);
+
+    })();
+
+    function countTimer(elements: any, item: number) {
+        let arr = elements,
+            element = arr[item],
+            value: number = element.getAttribute('data-value'),
+            step: number = parseInt(value / ((item+1) * 10)),
+            postion = element.getAttribute('data-position'),
+            start = (parseInt(postion) == 0) ? step : parseInt(postion) + step;
+
+
+        if((value - start) < step){
+            start = value;
+        };
+
+        element.textContent = start.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+        element.setAttribute('data-position', start)
+
+        clearInterval(countTimer);
+    }
