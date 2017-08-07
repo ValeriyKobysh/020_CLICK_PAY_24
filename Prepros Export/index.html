@@ -33,7 +33,7 @@
             </div>
             <div class="header__right flex-container jc-center column-6_xl column-6_md column-12_xs">
               <div class="header__video-block">
-                <iframe class="header__video" src="https://www.youtube.com/embed/5bRPTb3z2rU" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                <iframe class="header__video" src="https://www.youtube.com/embed/YsYAILImDdU" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
               </div>
             </div>
           </div>
@@ -57,6 +57,7 @@
       </section>
       <section class="about">
         <div class="about__container container">
+          <h2 class="about__head">Сервис моментального приема платежей и каталог партнерских программ Clickpay24 это:</h2>
           <div class="about__item flex-container flex-col_xs">
             <div class="about__img-block about__img-block_odd"><img class="about__img about__img_1-1" src="img/about/1/1.png" alt=""/><img class="about__img about__img_1-2" src="img/about/1/2.png" alt=""/><img class="about__img about__img_1-3" src="img/about/1/3.png" alt=""/><img class="about__img about__img_1-4" src="img/about/1/4.png" alt=""/></div>
             <div class="about__text-block">
@@ -90,11 +91,31 @@
       <section class="stat">
         <div class="stat__container container">
           <ul class="stat__list list flex-container ai-center jc-around">
-                  <li class="stat__item"><span class="stat__number" data-value="60197" data-position="0">0</span><span class="stat__text">количество партнеров</span></li>
-                  <li class="stat__item"><span class="stat__number" data-value="12196" data-position="0">0</span><span class="stat__text">количество товаров</span></li>
-                  <li class="stat__item"><span class="stat__number" data-value="20455848" data-position="0">0</span><span class="stat__text">партнерских переходов</span></li>
-                  <li class="stat__item"><span class="stat__number" data-value="91443564" data-position="0">0</span><span class="stat__text">количество транзакций</span></li>
-                  <li class="stat__item"><span class="stat__number" data-value="60365997" data-position="0">0</span><span class="stat__text">сумма выплат</span></li>
+            <li class="stat__item"><span class="stat__img">
+                <div id="animation_container3" style=" width:90px; height:90px;">
+                  <canvas id="canvas3" width="90" height="90" style="position: absolute; display: block;"></canvas>
+                  <div id="dom_overlay_container3" style="pointer-events:none; overflow:hidden; width:90px; height:90px; position: absolute; left: 0px; top: 0px; display: block;"></div>
+                </div></span><span class="stat__number" data-value="60197" data-position="0">0</span><span class="stat__text">количество партнеров</span></li>
+            <li class="stat__item"><span class="stat__img">
+                <div id="animation_container4" style=" width:90px; height:90px;">
+                  <canvas id="canvas4" width="90" height="90" style="position: absolute; display: block;"></canvas>
+                  <div id="dom_overlay_container4" style="pointer-events:none; overflow:hidden; width:90px; height:90px; position: absolute; left: 0px; top: 0px; display: block;"></div>
+                </div></span><span class="stat__number" data-value="12196" data-position="0">0</span><span class="stat__text">количество товаров</span></li>
+            <li class="stat__item"><span class="stat__img">
+                <div id="animation_container2" style=" width:90px; height:90px;">
+                  <canvas id="canvas2" width="90" height="90" style="position: absolute; display: block;"></canvas>
+                  <div id="dom_overlay_container2" style="pointer-events:none; overflow:hidden; width:90px; height:90px; position: absolute; left: 0px; top: 0px; display: block;"></div>
+                </div></span><span class="stat__number" data-value="20455848" data-position="0">0</span><span class="stat__text">партнерских переходов</span></li>
+            <li class="stat__item"><span class="stat__img">
+                <div id="animation_container5" style=" width:90px; height:90px;">
+                  <canvas id="canvas5" width="90" height="90" style="position: absolute; display: block;"></canvas>
+                  <div id="dom_overlay_container5" style="pointer-events:none; overflow:hidden; width:90px; height:90px; position: absolute; left: 0px; top: 0px; display: block;"></div>
+                </div></span><span class="stat__number" data-value="91443564" data-position="0">0</span><span class="stat__text">количество транзакций</span></li>
+            <li class="stat__item"><span class="stat__img">
+                <div id="animation_container1" style=" width:90px; height:90px;">
+                  <canvas id="canvas1" width="90" height="90" style="position: absolute; display: block;"></canvas>
+                  <div id="dom_overlay_container1" style="pointer-events:none; overflow:hidden; width:90px; height:90px; position: absolute; left: 0px; top: 0px; display: block;"></div>
+                </div></span><span class="stat__number" data-value="60365997" data-position="0">0</span><span class="stat__text">сумма выплат</span></li>
           </ul>
         </div>
       </section>
@@ -186,5 +207,7 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+    <script src="js/icons.js"></script>
   </body>
 </html>

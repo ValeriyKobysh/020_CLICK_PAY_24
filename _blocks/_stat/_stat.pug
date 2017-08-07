@@ -1,14 +1,43 @@
-mixin statItems(number, text)
-    li.stat__item
-        span.stat__number(data-value=number data-position="0") 0
-        span.stat__text #{text}
-
+//- mixin statItems(number, text, icon)
+//-     li.stat__item
+//-         span.stat__number(data-value=number data-position="0") 0
+//-         span.stat__text #{text}
 
 section.stat
     .stat__container.container
         ul.stat__list.list.flex-container.ai-center.jc-around
-            +statItems(60197, "количество партнеров")
-            +statItems(12196, "количество товаров")
-            +statItems(20455848, "партнерских переходов")
-            +statItems(91443564, "количество транзакций")
-            +statItems(60365997, "сумма выплат")
+            li.stat__item
+                span.stat__img
+                    #animation_container3(style=" width:90px; height:90px")
+                        canvas#canvas3(width="90" height="90" style="position: absolute; display: block;")
+                        #dom_overlay_container3(style="pointer-events:none; overflow:hidden; width:90px; height:90px; position: absolute; left: 0px; top: 0px; display: block;")
+                span.stat__number(data-value="60197" data-position="0") 0
+                span.stat__text количество партнеров
+            li.stat__item
+                span.stat__img
+                    #animation_container4(style=" width:90px; height:90px")
+                        canvas#canvas4(width="90" height="90" style="position: absolute; display: block;")
+                        #dom_overlay_container4(style="pointer-events:none; overflow:hidden; width:90px; height:90px; position: absolute; left: 0px; top: 0px; display: block;")
+                span.stat__number(data-value="12196" data-position="0") 0
+                span.stat__text количество товаров
+            li.stat__item
+                span.stat__img
+                    #animation_container2(style=" width:90px; height:90px")
+                        canvas#canvas2(width="90" height="90" style="position: absolute; display: block;")
+                        #dom_overlay_container2(style="pointer-events:none; overflow:hidden; width:90px; height:90px; position: absolute; left: 0px; top: 0px; display: block;")
+                span.stat__number(data-value="20455848" data-position="0") 0
+                span.stat__text партнерских переходов
+            li.stat__item
+                span.stat__img
+                    #animation_container5(style=" width:90px; height:90px")
+                        canvas#canvas5(width="90" height="90" style="position: absolute; display: block;")
+                        #dom_overlay_container5(style="pointer-events:none; overflow:hidden; width:90px; height:90px; position: absolute; left: 0px; top: 0px; display: block;")
+                span.stat__number(data-value="91443564" data-position="0") 0
+                span.stat__text количество транзакций
+            li.stat__item
+                span.stat__img
+                    #animation_container1(style=" width:90px; height:90px")
+                        canvas#canvas1(width="90" height="90" style="position: absolute; display: block;")
+                        #dom_overlay_container1(style="pointer-events:none; overflow:hidden; width:90px; height:90px; position: absolute; left: 0px; top: 0px; display: block;")
+                span.stat__number(data-value="60365997" data-position="0") 0
+                span.stat__text сумма выплат
