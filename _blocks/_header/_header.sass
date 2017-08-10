@@ -42,6 +42,25 @@
         align-items: center
         justify-content: center
 
+    &__login
+        @extend .header__nav-link
+        cursor: pointer
+        position: relative
+        text-transform: uppercase
+        font-weight: 700
+
+    &__login-list
+
+    &__login-item
+        display: block
+        margin-bottom: 10px
+        
+        &:last-child
+            margin-bottom: 0
+
+    &__login-link
+        color: $text-light-color
+
     &__mobile
         border: 0
         outline: none

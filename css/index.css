@@ -328,6 +328,18 @@ body {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center; }
+  .header__login {
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 700; }
+  .header__login-item {
+    display: block;
+    margin-bottom: 10px; }
+    .header__login-item:last-child {
+      margin-bottom: 0; }
+  .header__login-link {
+    color: #fff; }
   .header__mobile {
     border: 0;
     outline: none;
@@ -1164,22 +1176,38 @@ body {
     margin-left: 50px; }
     .header__nav-item:first-child {
       margin-left: 0; }
-  .header__nav-link {
+  .header__nav-link, .header__login {
     color: #fff;
     font-size: 0.9375rem;
     line-height: 1.5rem;
     -webkit-transition: color 0.3s ease;
     -o-transition: color 0.3s ease;
     transition: color 0.3s ease; }
-    .header__nav-link:hover, .header__nav-link:active {
+    .header__nav-link:hover, .header__login:hover, .header__nav-link:active, .header__login:active {
       color: #d9edff; }
   .header__content {
     height: 700px; }
   .header__logo {
     width: 200px;
     height: 60px; }
-  .header__btn {
+  .header__btn, .header__login {
     margin-left: 38px; }
+  .header__login-list {
+    display: none;
+    position: absolute;
+    top: 150%;
+    left: -50%;
+    z-index: 10; }
+  .header__login-chevron {
+    display: inline-block;
+    border-top: 6px solid #fff;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    margin-left: 10px;
+    -webkit-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+    transform: translateY(3px); }
   .header__video-block {
     width: 460px;
     height: 270px; }
@@ -1688,7 +1716,6 @@ body {
     position: absolute;
     background-color: #fff;
     width: 330px;
-    height: 190px;
     right: 15px;
     top: 45px;
     border-radius: 15px 0 15px 15px;
@@ -1715,10 +1742,16 @@ body {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column; }
-    .header__nav-link {
+    .header__nav-link, .header__login {
       color: #424242;
       display: block;
       margin-bottom: 15px; }
+  .header__login {
+    width: 100%;
+    text-align: center; }
+  .header__login-list {
+    margin-top: 20px;
+    margin-bottom: 0; }
   .header__video-block {
     width: 330px; }
   .header__desc {

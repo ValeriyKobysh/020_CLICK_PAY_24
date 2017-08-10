@@ -14,7 +14,14 @@ header.header.flex-container.flex-col
                             +headerNavItem("blog.html", "Наш блог")
                             +headerNavItem("blog.html", "Поиск платежей")
                             +headerNavItem("blog.html", "Разработка сайтов")
-                    a.header__btn.btn.btn_small.btn_color.link(href="javascript:;") Войти
+                    // a.header__btn.btn.btn_small.btn_color.link(href="javascript:;") Войти
+                    div.header__login(href="javascript:;") My name
+                        span.header__login-chevron
+                        ul.header__login-list.list
+                            li.header__login-item
+                                a.header__login-link.btn.btn_small.btn_color.flex-container.ai-center.jc-center.link(href="javascript:;") Мой ClickPay
+                            li.header__login-item
+                                a.header__login-link.btn.btn_small.btn_color.flex-container.ai-center.jc-center.link(href="javascript:;") Выход
                 button.header__mobile
                     span.header__icon
     .header__content

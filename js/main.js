@@ -103,4 +103,9 @@ function countTimer(elements, item) {
     element.setAttribute('data-position', start);
     clearInterval(countTimer);
 }
+$('.header__login').click(function () {
+    if ($(window).outerWidth() > 1200) {
+        $('.header__login-list').slideToggle("fast");
+    }
+});
 //# sourceMappingURL=main.js.map

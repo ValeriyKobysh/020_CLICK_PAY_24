@@ -161,3 +161,12 @@
 
         clearInterval(countTimer);
     }
+
+
+//###
+    $('.header__login').click(function(){
+        if($(window).outerWidth() > 1200)
+        {
+            $('.header__login-list').slideToggle("fast");
+        }
+    })

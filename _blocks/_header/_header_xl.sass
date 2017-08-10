@@ -26,8 +26,24 @@
     &__logo
         +size(200px, 60px)
 
-    &__btn
+    &__btn, &__login
         margin-left: 38px
+
+    &__login-list
+        display: none
+        position: absolute
+        top: 150%
+        left: -50%
+        z-index: 10
+
+    &__login-chevron
+        display: inline-block
+        border-top: 6px solid $white-color
+        border-left: 6px solid transparent
+        border-right: 6px solid transparent
+        border-bottom: 6px solid transparent
+        margin-left: 10px
+        transform: translateY(3px)
 
     &__video-block
         +size(460px, 270px)

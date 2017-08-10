@@ -20,7 +20,14 @@
                           <li class="header__nav-item"><a class="header__nav-link link" href="blog.html">Поиск платежей</a></li>
                           <li class="header__nav-item"><a class="header__nav-link link" href="blog.html">Разработка сайтов</a></li>
                   </ul>
-                </nav><a class="header__btn btn btn_small btn_color link" href="javascript:;">Войти</a>
+                </nav>
+                <!-- a.header__btn.btn.btn_small.btn_color.link(href="javascript:;") Войти-->
+                <div class="header__login" href="javascript:;">My name<span class="header__login-chevron"></span>
+                  <ul class="header__login-list list">
+                    <li class="header__login-item"><a class="header__login-link btn btn_small btn_color flex-container ai-center jc-center link" href="javascript:;">Мой ClickPay</a></li>
+                    <li class="header__login-item"><a class="header__login-link btn btn_small btn_color flex-container ai-center jc-center link" href="javascript:;">Выход</a></li>
+                  </ul>
+                </div>
               </div>
               <button class="header__mobile"><span class="header__icon"></span></button>
             </div>
@@ -62,13 +69,13 @@
             <div class="about__img-block about__img-block_odd"><img class="about__img about__img_1-1" src="img/about/1/1.png" alt=""/><img class="about__img about__img_1-2" src="img/about/1/2.png" alt=""/><img class="about__img about__img_1-3" src="img/about/1/3.png" alt=""/><img class="about__img about__img_1-4" src="img/about/1/4.png" alt=""/></div>
             <div class="about__text-block">
               <h3 class="about__heading">Система  внутренней аналитики</h3>
-              <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam soluta corporis dolores dolor fuga laborum earum sint accusamus molestias vitae saepe, iusto. Quod numquam minus eum, praesentium maxime cupiditate quisquam magnam eos. Sit ea rem ipsa consectetur aut, inventore, voluptatibus deserunt placeat et ut dolorum tempora asperiores aliquid vero molestiae!</p>
+              <p class="about__text">Отслеживайте в режиме реального времени эффективность своей рекламной кампании. Мониторинг количества переходов по вашим ссылкам, переходов на страницы оплаты и 100% точные данные по созданным заказам</p>
             </div>
           </div>
           <div class="about__item flex-container flex-col_xs">
             <div class="about__text-block">
               <h3 class="about__heading about__heading_right">Система PUSH-уведомлений</h3>
-              <p class="about__text about__text_right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam soluta corporis dolores dolor fuga laborum earum sint accusamus molestias vitae saepe, iusto. Quod numquam minus eum, praesentium maxime cupiditate quisquam magnam eos. Sit ea rem ipsa consectetur aut, inventore, voluptatibus deserunt placeat et ut dolorum tempora asperiores aliquid vero molestiae!</p>
+              <p class="about__text about__text_right">Бесплатная работа с лояльностью посетителей вашего сайта. Установите HTML-код на страницы своего сайта и как только клиент появится в сети, он тут же увидит отправленное короткое сообщение в углу экрана монитора либо поверх вкладок на экране смартфона.</p>
             </div>
             <div class="about__img-block about__img-block_even"><img class="about__img about__img_2-1" src="img/about/2/1.png" alt=""/><img class="about__img about__img_2-2" src="img/about/2/2.png" alt=""/><img class="about__img about__img_2-3" src="img/about/2/3.png" alt=""/></div>
           </div>
@@ -76,13 +83,13 @@
             <div class="about__img-block about__img-block_odd"><img class="about__img about__img_3-1" src="img/about/3/1.png" alt=""/><img class="about__img about__img_3-2" src="img/about/3/2.png" alt=""/><img class="about__img about__img_3-3" src="img/about/3/3.png" alt=""/></div>
             <div class="about__text-block">
               <h3 class="about__heading">Неограниченное количество форм оплат</h3>
-              <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam soluta corporis dolores dolor fuga laborum earum sint accusamus molestias vitae saepe, iusto. Quod numquam minus eum, praesentium maxime cupiditate quisquam magnam eos. Sit ea rem ipsa consectetur aut, inventore, voluptatibus deserunt placeat et ut dolorum tempora asperiores aliquid vero molestiae!</p>
+              <p class="about__text">Выделяйтесь в глазах своих клиентов, создавайте уникальные формы оплаты, указывайте стоимость и подключайте в неограниченном количестве к своему сайту.</p>
             </div>
           </div>
           <div class="about__item flex-container flex-col_xs">
             <div class="about__text-block">
               <h3 class="about__heading about__heading_right">Реклама своего продукта внутри сервиса</h3>
-              <p class="about__text about__text_right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam soluta corporis dolores dolor fuga laborum earum sint accusamus molestias vitae saepe, iusto. Quod numquam minus eum, praesentium maxime cupiditate quisquam magnam eos. Sit ea rem ipsa consectetur aut, inventore, voluptatibus deserunt placeat et ut dolorum tempora asperiores aliquid vero molestiae!</p>
+              <p class="about__text about__text_right">Наш модуль внутренней тизерной сети, партнерский чат, система уведомлений и личных сообщений поможет рекламировать свою информационную продукцию внутри сервиса.</p>
             </div>
             <div class="about__img-block about__img-block_even"><img class="about__img about__img_4-1" src="img/about/4/1.png" alt=""/><img class="about__img about__img_4-2" src="img/about/4/2.png" alt=""/><img class="about__img about__img_4-3" src="img/about/4/3.png" alt=""/></div>
           </div>
@@ -176,8 +183,7 @@
       </section>
       <section class="subscribe">
         <div class="subscribe__container container flex-container ai-center jc-center flex-col_xs">
-          <h2 class="subscribe__heading">НАЧАТЬ ПРИНИМАТЬ ПЛАТЕЖИ</h2>
-          <button class="subscribe__btn btn btn_large btn_color">Приступить</button>
+          <h2 class="subscribe__heading">НАЧАТЬ ПРИНИМАТЬ ПЛАТЕЖИ</h2><a class="subscribe__btn btn btn_large btn_color flex-container jc-center ai-center link" href="javascript:;">Приступить</a>
         </div>
       </section>
     </div>
